@@ -272,3 +272,69 @@ footer .heart {
         padding: 15px;
     }
 }
+
+/* style.css - Add these new styles */
+
+/* Styles for the dedicated contact page (contact.html) */
+#contact-page-content {
+    min-height: 50vh; /* Adjust as needed to push footer down if content is short */
+    padding-bottom: 40px; /* Add some space before the footer */
+}
+
+#contact-page-content h2 {
+    margin-bottom: 15px;
+}
+
+#contact-page-content p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px; /* Space between icons */
+    align-items: center; /* Vertically align icons if they have different heights */
+}
+
+.social-links a {
+    display: inline-block; /* Allows for transforms and better spacing control */
+    color: #333; /* Default icon color */
+}
+
+.social-links img,
+.social-links .social-icon-svg {
+    width: 35px; /* Adjust size as needed */
+    height: 35px;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    fill: currentColor; /* For SVG to inherit link color */
+}
+
+.social-links a:hover img,
+.social-links a:hover .social-icon-svg {
+    opacity: 0.7;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Optional: Style for active navigation link */
+header nav ul li a.active {
+    color: #007bff; /* Or your preferred active link color */
+    font-weight: bold;
+    /* text-decoration: underline; */ /* Optional: underline active link */
+}
+
+/* Ensure the main content on contact.html takes up reasonable space */
+/* This helps push the footer down on pages with little content. */
+/* You can refine this further with flexbox on body if needed. */
+main {
+    flex-grow: 1; /* If body is display: flex; flex-direction: column; */
+}
+
+/* If you haven't already, make body a flex container to push footer down */
+/* Add this if your footer isn't staying at the bottom on short pages */
+/*
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+*/

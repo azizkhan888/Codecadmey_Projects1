@@ -29,23 +29,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- Interactive Feature 2: Alert for the "Say Hello!" Button ---
-    const interactiveButton = document.getElementById('interactiveButton');
-    if (interactiveButton) {
-        interactiveButton.addEventListener('click', function() {
-            alert('Hello from Ada Lovelace! Thank you for your interest.');
-        });
-    }
+    // const interactiveButton = document.getElementById('interactiveButton');
+    // if (interactiveButton) {
+    //     interactiveButton.addEventListener('click', function() {
+    //         alert('Hello from Ada Lovelace! Thank you for your interest.');
+    //     });
+    // }
 
     // --- (Optional) Interactive Feature 3: Fun fact dynamic update (Example) ---
     // This is just an example. The number in the HTML is static.
     // To make it dynamic, you'd calculate it.
-    // const funFactElement = document.querySelector('#about-me p:last-child');
-    // if (funFactElement && funFactElement.textContent.includes("seconds")) {
-    //     // Example: Update every second - this is just for show
-    //     // let secondsProgramming = 6609062584;
-    //     // setInterval(() => {
-    //     //     secondsProgramming++;
-    //     //     funFactElement.textContent = `Fun fact! I've been programming for ${secondsProgramming.toLocaleString()} seconds!`;
-    //     // }, 1000);
-    // }
+    const funFactElement = document.querySelector('#about-me p:last-child');
+    if (funFactElement && funFactElement.textContent.includes("seconds")) {
+        // Example: Update every second - this is just for show
+        let secondsProgramming = 6609062584;
+        setInterval(() => {
+            secondsProgramming++;
+            funFactElement.textContent = `Fun fact! I've been programming for ${secondsProgramming.toLocaleString()} seconds!`;
+        }, 1000);
+    }
 });
