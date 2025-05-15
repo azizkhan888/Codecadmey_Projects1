@@ -1,0 +1,6 @@
+ada-portfolio/
+├── index.html
+├── style.css
+├── script.js
+└── images/
+    └── ada_lovelace.jpg  (You'll need to add an image here)
